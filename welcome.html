@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Dushyant's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+      overflow: hidden;
+    }
+    
+    .welcome-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      font-family: 'Nanum Gothic Coding', sans-serif; /* Use Nanum Gothic Coding font */
+      z-index: 9999;
+    }
+
+    .typed-text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid white; /* Typing cursor */
+      animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: white; }
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-container">
+    <h1 class="typed-text">Welcome to Dushyant's Developer Portfolio...</h1>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "index.html"; // Redirect to index.html after typing animation completes
+    }, 6000); // Adjust timing as needed
+  </script>
+</body>
+</html>
